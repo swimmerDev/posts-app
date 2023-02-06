@@ -1,9 +1,14 @@
 import PostItem from "./PostItem";
-import { PostListComponent } from "../types/type";
+import { PostParams } from "../types/type";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
+type PostItemProps = {
+    posts: Array<PostParams>,
+    title: string,
+    remove: (removePost: PostParams) => void;
+};
 
-const PostList = ({posts, title, remove}:PostListComponent) => {
+const PostList = ({posts, title, remove}:PostItemProps) => {
 
     if (posts.length === 0)  {
         return (

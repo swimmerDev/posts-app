@@ -1,10 +1,13 @@
 import React from "react";
-import { PostFormComponent, PostParams } from "../types/type";
+import { PostParams } from "../types/type";
 import PostInput from "./UI/PostInput/PostInput";
 import PostButton from "./UI/PostButton/PostButton";
 
+type PostFormProps = {
+  create: (newPost: PostParams) => void;
+}
 
-const PostForm = ({create}:PostFormComponent) => {
+const PostForm = ({create}:PostFormProps) => {
 
     const [post, setPost] = React.useState<PostParams>({title:"", body:""});
 

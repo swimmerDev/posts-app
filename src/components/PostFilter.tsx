@@ -1,9 +1,14 @@
 import React from "react";
 import PostInput from "./UI/PostInput/PostInput";
 import PostSelect from "./UI/PostSelect/PostSelect";
-import { PostFilterComponent } from "../types/type";
+import { FilterParams } from "../types/type";
 
-const PostFilter = ({filter, setFilter}:PostFilterComponent) => {
+type PostFilterProps = {
+    filter: FilterParams,
+    setFilter: React.Dispatch<React.SetStateAction<FilterParams>>,
+}
+
+const PostFilter = ({filter, setFilter}:PostFilterProps) => {
     return (
         <div>   
             <PostInput

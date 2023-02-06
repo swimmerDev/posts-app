@@ -1,8 +1,14 @@
 import React from "react";
-import { PostItemComponent } from "../types/type";
+import { PostParams } from "../types/type";
 import PostButton from "./UI/PostButton/PostButton";
 
-const PostItem = ({post, index, remove}:PostItemComponent) => {
+type PostItemProps = {
+    post:PostParams,
+    index: number;
+    remove: (removePost: PostParams) => void;
+}
+
+const PostItem = ({post, index, remove}:PostItemProps) => {
     return (
         <div className='post'> 
         <div className='post-container'>

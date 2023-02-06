@@ -1,7 +1,16 @@
 import React from "react";
-import { PostSelectComponent } from "../../../types/type";
 
-const PostSelect = ({defaultValue, options, value, onChange}:PostSelectComponent) => {
+type PostSelectProps = {
+    defaultValue: string,
+    value: string,
+    onChange: (e: string) => void,
+    options: {    
+        value: string,
+        label: string,
+    }[],
+}
+
+const PostSelect = ({defaultValue, options, value, onChange}:PostSelectProps) => {
 
     return (
         <div>

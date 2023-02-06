@@ -1,8 +1,13 @@
 import React from "react";
 import classes from "./PostCreateModal.module.css"
-import { CreateModalComponent } from "../../../types/type";
 
-const PostCreateModal = ({children, visible, setVisible}:CreateModalComponent) => {
+type CreateModalProps = {
+    visible: boolean,
+    children: React.ReactNode,
+    setVisible: React.Dispatch<React.SetStateAction<boolean>>,
+}
+
+const PostCreateModal = ({children, visible, setVisible}:CreateModalProps) => {
 
     const rootClasses = [classes.modal]
 

@@ -1,8 +1,13 @@
 import React from "react";
 import classes from './PostButton.module.css';
-import { PostBtn } from "../../../types/type";
 
-const PostButton = (props:PostBtn) => {
+type PostBtnProps = {
+    children: string,
+    disabled?: boolean,
+    onClick?: (e: React.SyntheticEvent) => void,
+}
+
+const PostButton = (props:PostBtnProps) => {
     return (
         <button {...props} className={classes.PostBtn}>
             {props.children}        

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./styles/App.css";
 import PostList from "./components/PostList";
-import { PostParams, FilterParams, fetshingParams } from "./types/type";
+import { PostParams, FilterParams } from "./types/type";
 import PostButton from "./components/UI/PostButton/PostButton";
 import PostForm from "./components/PostForm";
 import PostFilter from "./components/PostFilter";
