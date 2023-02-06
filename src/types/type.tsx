@@ -68,9 +68,7 @@ export type CreateModalComponent = {
 
 
 export type fetshingParams = {
-[
     fetching: Promise<void>,
     isLoading: boolean,
     error: string,
-]
 }
