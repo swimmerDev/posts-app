@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-posts: center;
+}
+
+.App {
+    width: 70vh;
+}
+.post {
+    width: 100vh;
+    display: flex;
+    padding: 15px;
+    border: 1px solid blue;;
+    border-radius: 4px;
+    margin-top: 15px;
+    justify-content: space-between;
+    align-posts: center;
+}
+
+.TitlePosts {
+    text-align: center;
+    padding: 15px;
+}
+
+.remove-btn {
+    margin-right: 0.5rem;
+}
+  
+.post-enter {
+    opacity: 0;
+    transform: translate(-20vh);
+}
+.post-enter-active {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: all 500ms ease-in;
+}
+.post-exit {
+    opacity: 1;
+}
+.post-exit-active {
+    opacity: 0;
+    transform: translateX(-20vh);
+    transition: all 500ms ease-in;
+}
+  

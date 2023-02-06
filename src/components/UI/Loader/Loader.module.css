@@ -1,0 +1,23 @@
+.loader {
+    width: 4vh;
+    height: 4vh;
+    border-radius: 50%;
+    border: 1px dashed blue;
+    animation: rotate 2s linear infinite;
+}
+.loaderParams {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+    
+}
